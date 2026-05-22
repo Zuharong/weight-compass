@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'user_body_info_page.dart';
 
 class GoalSelectionPage extends StatefulWidget {
   const GoalSelectionPage({super.key});
@@ -129,10 +130,15 @@ class _GoalSelectionPageState extends State<GoalSelectionPage> {
                     ),
                   ),
                   onPressed: selectedGoal == null
-                      ? null
-                      : () {
-                          // Navigate to next page later
-                        },
+                    ? null
+                    : () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const UserBodyInfoPage(),
+                          ),
+                        );
+                      },
                   child: const Text(
                     'Next',
                     style: TextStyle(
