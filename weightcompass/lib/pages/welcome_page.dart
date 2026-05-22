@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'goal_selection_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -54,7 +55,12 @@ class WelcomePage extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      // button
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const GoalSelectionPage(),
+                        ),
+                      );
                     },
                     child: const Text(
                       'Get Started',
